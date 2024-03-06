@@ -1,79 +1,23 @@
-<!--DOCTYPE Comunica al navegador que es un archivo HTML-->
 <!DOCTYPE html>
-
-<!--"head" es metadata no dirigida al usuario-->
+<html lang="es">
 <head>
-    <!--"title" le da nombre a pestaña del navegador -->
-    <title>Apuntes HTML</title>
-    <style>
-        table, th,td{
-            border:1px solid black;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Pensión</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
-
-<!--"body" es el contenido dirigido al usuarios-->
 <body>
-    <header>    
-        <h1>Aloha</h1>
-        <h2>Esta pagina es un curriculum </h2>
-    </header>
-
-    <section>
-        <h3>Resumen del curriculum</h3>
-        <ul>
-            <li> Interés y buena disposición para aprender cualquier tipo de actividad
-            </li>
-            <li>Programación: Python, R y SQL. Aprendiendo Solidity</li>
-            <li>Proyección laboral en gestión patrimonial</li>
-            <li>Conocimientos variados y profundos en tópicos financieros e inversión</li>
-            <li>Capacidad para ejecutar trabajos sistemáticos</li>
-            <li>Manejo de Word, Excell, Power Point, Acces y Stata</li>
-            <li>Buena presencia</li>
-            <li>Idiomas: Ingles-intermedio Alemán- básico</li>
-        </ul>
-        <br>
-    </section>
-
-    <section>
-        <h3>Experiencia</h3>
-        <ul>
-            <li> Atención al cliente en supermercado líder. 3 meses 2017-2018
-            </li>
-            <li>Pasantías en Andes Logistics (Dept. Contabilidad). 4 meses en total (veranos de 2019 y 2020)</li>
-            <li>Emprendimiento: Galería de arte online Kunsart.com (actualmente Inactivo) 2019-2021
-            </li>
-            <br>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Educaion/formacion</h3>
-        <ul>
-            <li> Colegio Pablo Apóstol - La Florida, egresado 2016. Promedio Final: 6,4
-            </li>
-            <li>Año escolar 2016-2017 en Suiza, Gymnasium koeniz lerbermatt, 
-                Enseñanza Media</li>
-            <li>Actualmente terminando cuarto año de Ing. Comercial en la UC
-            </li>
-            <br>
-        </ul>
-    </section>
-
-
-    <section>
-        <h3>Asistencia a cursos y actividades varias.</h3>
-        <ul>
-            <li> Migros klubschule Bern (Suiza): Curso de alemán A1-A2</li>
-            <li>Universidad de Chile (2016): Curso de verano “Innovación: Ciencia y tecnología para el emprendimiento”</li>
-            <li>Trabajos voluntarios en Sembrando un Sueño, Comparte, limpieza playas y reforestación</li>
-        </ul>
-        <br>
-    </section>
-
-
-
-
-    <footer>contacto:</footer>
+    <div class="contenedor">
+        <h1>Calculadora de Pensión</h1>
+        <label for="meta">Meta mensual de la pensión:</label>
+        <input type="number" id="meta" required>
+        <label for="duracion">Duración de la pensión en meses:</label>
+        <input type="number" id="duracion" required>
+        <label for="retorno">Retorno porcentual anual de la inversión:</label>
+        <input type="number" id="retorno" step="0.01" required>
+        <button onclick="calcularValorPresente()">Calcular</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="logica.js"></script>
 </body>
 </html>
